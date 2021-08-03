@@ -48,4 +48,17 @@ t <- 0
 eval(expr = dg_dt)
 ```
 
+### Higher order univariate derivatives
+Back in RStudio, add a code chunk in your Rmd in which you find the second derivative with respect to z
+for $G(z)=4.6−1.9z^3$
+```{r}
+Gz <- expression(4.6 - 1.9 * z^3)
+
+dG_dz <- D(expr = Gz, name = "z")
+dG_dz
+
+d2G_dz2 <- D(expr = dG_dz, name = "z")
+
+d2G_dz2
+```
 
