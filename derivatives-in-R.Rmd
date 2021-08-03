@@ -15,7 +15,7 @@ library(palmerpenguins)
 
 In your R Markdown document, find the derivative expression and slope at the indicated value for each the following functions in R (each in a separate code chunk).
 
-A: $f(x)=x^2$
+A: $f(x)=x^2$ at x=3
 ```{r}
 fx <- expression(x^2)
 
@@ -25,5 +25,15 @@ x <- 3
 eval(expr = df_dx)
 ```
 
-B: $f(x)=x^2$
+B: $P(a)=2(3a+2)^4-5$ at a=1.2
+```{r}
+Pa <- expression(2 * (3 * a + 2) ^4 - 5)
+
+dP_da <- D(expr = Pa, name = 'a')
+
+a <- 1.2
+eval(expr = dP_da)
+```
+
+C: $$
 
