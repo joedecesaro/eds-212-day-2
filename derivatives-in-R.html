@@ -171,7 +171,19 @@ pre code {
 </div>
 
 
+<div id="first-order-univariate-derivatives" class="section level3">
+<h3>First order univariate derivatives</h3>
+<p>In your R Markdown document, find the derivative expression and slope at the indicated value for each the following functions in R (each in a separate code chunk).</p>
+<p>A: <span class="math inline">\(f(x)=x^2\)</span></p>
+<pre class="r"><code>fx &lt;- expression(x^2)
 
+df_dx &lt;- D(expr = fx, name = &#39;x&#39;)
+
+x &lt;- 3
+eval(expr = df_dx)</code></pre>
+<pre><code>## [1] 6</code></pre>
+<p>B: <span class="math inline">\(f(x)=x^2\)</span></p>
+</div>
 
 
 
